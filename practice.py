@@ -1,3 +1,5 @@
+import datetime
+
 def sumOfNumbers (x, y):
     return x + y
 
@@ -38,3 +40,11 @@ def perimeterOfRectangle (length, width):
 length = int(input("Enter the length of a rectangle "))
 width = int(input("Enter the width of a rectangle "))
 print(f'Perimeter of the rectangle is {perimeterOfRectangle(length, width)}')
+
+#Year of birth calculator
+def getYearOfBirth(age):
+    currentYear = datetime.date.today()
+    year = int(currentYear.year)
+    return year - age
+age = int(input("Enter your current age "))
+print(getYearOfBirth(age))
